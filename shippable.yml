@@ -10,8 +10,11 @@ install: pip install --use-mirrors -r requirements.txt
 
 script:
  - python sample.py
+ 
+before_script:
+ - mkdir -p shippable/testresults
+ - mkdir -p shippable/codecoverage
 
-#exclude
 branches:
   except:
     - stage
